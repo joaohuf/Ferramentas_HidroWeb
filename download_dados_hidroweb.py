@@ -53,7 +53,7 @@ def unzip_station_data(station_raw_data, dir):
 # formato = 2 => .TXT
 # formato = 3 => .CSV
 
-dir_save = '/home/joao/Music/'
+dir_save = '/home/'
 cod = 64634000
 
 download(cod, formato=2, dir=dir_save, save_zip=False)
