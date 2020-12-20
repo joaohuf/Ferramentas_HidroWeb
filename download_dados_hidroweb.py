@@ -7,13 +7,13 @@ BASE_URL = 'http://www.snirh.gov.br/hidroweb/rest/api/documento/convencionais'
 
 # Faz o download dos dados
 def download(codigo, formato, dir, save_zip=False):
-    '
-    Faz o download de uma estação convencional do hidroweb, usando o código dela
-    codigo - Int - Número do código da estação
-    formato => Int -  Número entre 1 e 3 que indica o tipo de arquivo para download (1-mdb, 2-txt, 3-csv)
-    dir => path - Diretório para salvar os dados
-    save_zip => True/False - Determina se é para salvas o .zip original ou descompactar tudo
-    '
+    
+    # Faz o download de uma estação convencional do hidroweb, usando o código dela
+    # codigo - Int - Número do código da estação
+    # formato => Int -  Número entre 1 e 3 que indica o tipo de arquivo para download (1-mdb, 2-txt, 3-csv)
+    # dir => path - Diretório para salvar os dados
+    # save_zip => True/False - Determina se é para salvas o .zip original ou descompactar tudo
+    
     print(f'Baixando a estação: {codigo}')
     # Arruma os parâmetros e faz o request dos dados
     params = {'tipo': formato, 'documentos': codigo}
