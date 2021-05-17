@@ -1,6 +1,6 @@
 import pandas as pd
 from datetime import datetime
-from tkinter import messagebox
+#from tkinter import messagebox
 import numpy as np
 
 BASE_URL = 'http://www.snirh.gov.br/hidroweb/rest/api/documento/convencionais'
@@ -178,7 +178,8 @@ def format_Date(data):
                 return datetime.strptime(data, '%d/%m/%Y %H:%M:%S')
             except ValueError:
                 print(data)
-                messagebox.showinfo('AVISO: formato de data não existe: data foi excluida')
+                print('AVISO: formato de data não existe: data foi excluida')
+                #messagebox.showinfo('AVISO: formato de data não existe: data foi excluida')
                 return np.nan
 
 
@@ -202,10 +203,11 @@ def checagem_final_hidroweb(dt, name):
 
     dt = dt.iloc[:, ::-1]
 
-    # Checa se existe algum nível de ocnsistência diferente de 1 e 2
+    # Checa se existe algum nível de consistência diferente de 1 e 2
     for nivel in list(dt['Nivel_Consistencia']):
         if (nivel != 1) and (nivel != 2):
-            messagebox.showinfo("AVISO", "Existem Níveis de consistência diferentes de 1 e 2")
+            print("AVISO", "Existem Níveis de consistência diferentes de 1 e 2")
+            #messagebox.showinfo("AVISO", "Existem Níveis de consistência diferentes de 1 e 2")
             break
 
     # Organizará as datas e os níveis de consistência em ordem crescente
@@ -227,7 +229,8 @@ def checagem_final_hidroweb_2(dt):
     # Checa se existe algum nível de ocnsistência diferente de 1 e 2
     for nivel in list(dt['Nivel_Consistencia']):
         if (nivel != 1) and (nivel != 2):
-            messagebox.showinfo("AVISO", "Existem Níveis de consistência diferentes de 1 e 2")
+            print("AVISO", "Existem Níveis de consistência diferentes de 1 e 2")
+            #messagebox.showinfo("AVISO", "Existem Níveis de consistência diferentes de 1 e 2")
             break
 
     # Organizará as datas e os níveis de consistência em ordem crescente
