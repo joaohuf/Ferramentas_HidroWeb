@@ -2,7 +2,7 @@ import requests
 from io import BytesIO
 from zipfile import ZipFile
 
-# Link onde estão os dados das estações convencionais
+# Link onde estão os dados das estações convencionaiss
 BASE_URL = 'http://www.snirh.gov.br/hidroweb/rest/api/documento/convencionais'
 
 # Faz o download dos dados
